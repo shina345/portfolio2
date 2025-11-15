@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-Quest IT Hub Launch Timer</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Tech-inspired dark gradient */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05); /* Enhanced glassmorphism */
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            padding: 50px 70px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 2;
+            max-width: 900px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: neonGlow 1.5s infinite alternate;
+        }
+
+        @keyframes neonGlow {
+            from { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #00bfff, 0 0 20px #00bfff; }
+            to { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00bfff, 0 0 40px #00bfff; }
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        p {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.85;
+        }
+
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .time-unit {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            min-width: 140px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .time-unit::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 191, 255, 0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .time-unit:hover::before {
+            opacity: 1;
+        }
+
+        .time-unit:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(0, 191, 255, 0.4);
+        }
+
+        .time-value {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .time-label {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            margin-top: 15px;
+            opacity: 0.8;
+        }
+
+        /* Progress bar */
+        .progress-container {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .progress-label {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: #00bfff;
+            height: 100%;
+            width: 0;
+            transition: width 0.5s ease;
+        }
+
+        /* Newsletter signup */
+        .newsletter {
+            margin-top: 50px;
+        }
+
+        .newsletter h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .newsletter input {
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            width: 300px;
+            font-size: 1rem;
+        }
+
+        .newsletter button {
+            padding: 15px 30px;
+            background: #00bfff;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter button:hover {
+            background: #008fcc;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 50px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            .time-value {
+                font-size: 3rem;
+            }
+
+            .timer {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .time-unit {
+                min-width: 120px;
+                padding: 20px;
+            }
+
+            .newsletter form {
+                flex-direction: column;
+            }
+
+            .newsletter input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>C-Quest IT Hub</h1>
+        <div class="tagline">Learn • Code • Grow</div>
+        <p>Our innovative workspace will open in the next 60 days!</p>
+        <div class="timer">
+            <div class="time-unit">
+                <div class="time-value" id="days">00</div>
+                <div class="time-label">Days</div>
+            </div>
+            <div class="time-unit">
+                <div class="time-value" id="hours">00</div>
+                <div class="time-label">Hours</div>
+            </div>
+            <div class="time-unit">
+                <div class="time-value" id="minutes">00</div>
+                <div class="time-label">Minutes</div>
+            </div>
+            <div class="time-unit">
+                <div class="time-value" id="seconds">00</div>
+                <div class="time-label">Seconds</div>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-label">Progress to Launch:</div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+       
+    </div>
+
+    <script>
+        // Calculate target date: 60 days from now
+        const now = new Date();
+        const targetDate = new Date(now);
+        targetDate.setDate(now.getDate() + 60);
+        const totalTime = 60 * 24 * 60 * 60 * 1000; // 60 days in ms
+
+        // Update the countdown every second
+        const countdown = setInterval(() => {
+            const currentTime = new Date().getTime();
+            const timeRemaining = targetDate.getTime() - currentTime;
+
+            // Calculate days, hours, minutes, seconds
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // Display the values
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            // Update progress bar
+            const progress = ((totalTime - timeRemaining) / totalTime) * 100;
+            document.getElementById('progress-fill').style.width = `${progress}%`;
+
+            // If countdown is over, stop the timer
+            if (timeRemaining < 0) {
+                clearInterval(countdown);
+                document.querySelector('.timer').innerHTML = '<p>The hub is now open!</p>';
+                document.getElementById('progress-fill').style.width = '100%';
+            }
+        }, 1000);
+
+    </script>
+</body>
+</html>

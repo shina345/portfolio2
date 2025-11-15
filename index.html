@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinaayomi| Senior Frontend Developer</title>
+    <meta name="description" content="Senior Frontend Developer crafting pixel-perfect, animated, high-performance user interfaces with React, Next.js, TypeScript, and modern tooling. Available for freelance & remote roles.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- GSAP + ScrollTrigger + Lenis + SplitType -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  
+      
+</head>
+<body>
+
+<div class="preloader">
+    <div class="loader"></div>
+</div>
+
+<div class="cursor"></div>
+
+<header id="header">
+    <nav>
+        <div class="logo">Shinaayomi</div>
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#stats">Stats</a>
+            <a href="#projects">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="hero-subtitle">Senior Frontend Developer</div>
+        <div class="status-badge">
+            <div class="dot"></div>
+            Open for new opportunities
+        </div>
+        <div class="typed-text" id="typed"></div>
+        
+        <div class="social-icons">
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="CodePen"><i class="fab fa-codepen"></i></a>
+            <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+        </div>
+        
+        <div class="cta-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Hire Me Now</a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+        <div class="profile-img-container">
+            <img src="image.jpeg" alt="Eoghloopion - Senior Frontend Developer" class="profile-img">
+        </div>
+        
+        <div class="about-text">
+            <p>I architect breathtaking, high-performance frontend experiences that push the boundaries of what's possible on the web.</p>
+            <p>8+ years leading complex React/Next.js projects, building design systems used by millions, and mentoring teams at scale.</p>
+            <p>Master of advanced animations, micro-interactions, WebGL, accessibility, and performance — turning Figma designs into flawless, 60fps reality.</p>
+            <p>Currently selectively available for high-impact projects and leadership roles.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card"><i class="fab fa-react"></i><div>React / Next.js 14</div></div>
+                <div class="skill-card"><i class="fas fa-wind"></i><div>Tailwind / Framer</div></div>
+                <div class="skill-card"><i class="fab fa-js-square"></i><div>TypeScript</div></div>
+                <div class="skill-card"><i class="fas fa-paint-brush"></i><div>GSAP / Three.js</div></div>
+                <div class="skill-card"><i class="fas fa-universal-access"></i><div>WCAG AAA</div></div>
+                <div class="skill-card"><i class="fas fa-rocket"></i><div>100 Lighthouse</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats" id="stats">
+    <h2 class="section-title">By the Numbers</h2>
+    <div class="stats-grid">
+        <div class="stat">
+            <h3 data-target="8">0</h3>
+            <p>Years Experience</p>
+        </div>
+        <div class="stat">
+            <h3 data-target="80">0</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat">
+            <h3 data-target="40">0</h3>
+            <p>Happy Clients</p>
+        </div>
+        <div class="stat">
+            <h3 data-target="100">0</h3>
+            <p>% Satisfaction</p>
+        </div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <h2 class="section-title">Selected Work</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <div class="project-img" style="background-image: url('project.png')">
+                <div class="project-overlay">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="https://artfunfest.com.ng/"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>ArtFunFest Afro Fusion</h3>
+                <p>Art Funfest Afro Fusion is a movement that empowers artists and celebrates the raw beauty of African creativity.</p>
+                <div class="tags">
+                    <span class="tag">Html5</span>
+                    <span class="tag">Tailwind</span>
+                    <span class="tag">Framer Motion</span>
+                    <span class="tag">PHP</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-img" style="background-image: url('project2.png')">
+                <div class="project-overlay">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="https://www.snipevolt.co/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>An advanced trading platform</h3>
+                <p>Advanced trading platform with real-time analytics, institutional-grade security, and AI-powered tools for cryptocurrency trading.</p>
+                <div class="tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">GSAP</span>
+                    <span class="tag">Three.js</span>
+                    <span class="tag">Lenis</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-img" style="background-image: url('project3.png')">
+                <div class="project-overlay">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="https://swipee.vercel.app/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>Enterprise Design System</h3>
+                <p>Swipe Telecommunication services</p>
+                <div class="tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">GSAP</span>
+                  
+                </div>
+            </div>
+        </div>
+
+         <div class="project-card">
+            <div class="project-img" style="background-image: url('project4.png')">
+                <div class="project-overlay">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="https://cquestithub.com/"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>C-QUEST IT HUB</h3>
+                <p>To bridge the gap between learning and earning by providing practical, high-quality tech training</p>
+                <div class="tags">
+                    <span class="tag">Next.js</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">GSAP</span>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title">Let's Work Together</h2>
+    <form action="https://formspree.io/f/your-email" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Tell me about your project, design style, timeline, budget..." required></textarea>
+        <button type="submit">Send Message →</button>
+    </form>
+</section>
+
+<footer>
+    <p>©2023 shinaayomi. Senior Frontend Developer </p>
+    <div class="footer-social">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-codepen"></i></a>
+        <a href="#"><i class="fab fa-dribbble"></i></a>
+    </div>
+</footer>
+
+<script>
+    // Preloader
+    window.addEventListener('load', () => {
+        gsap.to('.preloader', { opacity: 0, duration: 1, delay: 0.5, onComplete: () => document.querySelector('.preloader').style.visibility = 'hidden' });
+    });
+
+    // Lenis smooth scroll
+    const lenis = new Lenis({ duration: 1.6, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => lenis.raf(time * 1000));
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // SplitType for hero text
+    const heroTitle = new SplitType('.hero h1', { types: 'chars' });
+    const heroSubtitle = new SplitType('.hero-subtitle', { types: 'words' });
+
+    gsap.from(heroTitle.chars, { y: 200, opacity: 0, stagger: 0.05, duration: 1.6, ease: "power4.out" });
+    gsap.from(heroSubtitle.words, { y: 120, opacity: 0, stagger: 0.1, duration: 1.4, ease: "power4.out", delay: 0.6 });
+
+    // Section titles split
+    gsap.utils.toArray('.section-title').forEach(title => {
+        const split = new SplitType(title, { types: 'words' });
+        gsap.from(split.words, { y: 100, opacity: 0, stagger: 0.08, duration: 1.4, ease: "power4.out", scrollTrigger: { trigger: title, start: "top 80%" } });
+    });
+
+    // Stats counter
+    const counters = document.querySelectorAll('.stat h3');
+    const startCount = (el) => {
+        const target = +el.getAttribute('data-target');
+        const speed = 80;
+        const increment = target / speed;
+        let current = 0;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current > target) {
+                el.innerText = target + (target === 100 ? '%' : '+');
+                clearInterval(timer);
+            } else {
+                el.innerText = Math.ceil(current) + (target === 100 ? '%' : '+');
+            }
+        }, 30);
+    };
+
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCount(entry.target.querySelector('h3'));
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(counter => statsObserver.observe(counter.parentElement));
+
+    // Custom cursor
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', e => cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`);
+    document.querySelectorAll('a, button, .project-card, .skill-card, .btn').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
+    });
+
+    // Dark mode
+    const themeToggle = document.getElementById('theme-toggle');
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        themeToggle.innerHTML = document.body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileToggle.innerHTML = navLinks.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+
+    // Typing animation
+    const texts = [
+        "Crafting pixel-perfect interfaces",
+        "Master of React & Next.js",
+        "Performance & animation obsessed",
+        "Turning Figma into flawless code",
+        "Available for your next project"
+    ];
+    let i = 0, j = 0, current = "";
+    const typedElement = document.getElementById("typed");
+    
+    function type() {
+        if (j < texts[i].length) {
+            current += texts[i][j];
+            typedElement.innerHTML = current + "<span style='opacity:0.7'>|</span>";
+            j++;
+            setTimeout(type, 100);
+        } else {
+            setTimeout(deleteText, 2500);
+        }
+    }
+    
+    function deleteText() {
+        if (j > 0) {
+            current = current.slice(0, -1);
+            typedElement.innerHTML = current + "<span style='opacity:0.7'>|</span>";
+            j--;
+            setTimeout(deleteText, 50);
+        } else {
+            i = (i + 1) % texts.length;
+            setTimeout(type, 600);
+        }
+    }
+    
+    type();
+</script>
+
+</body>
+</html>
